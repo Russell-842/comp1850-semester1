@@ -1,1 +1,32 @@
 week1 programming
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ touch myfile
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ git add myfile
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   myfile
+
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ git commit -m "task1 completed"
+[main fa3eb62] task1 completed
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfile
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Russell-842/comp1850-semester1
+   332ec37..fa3eb62  main -> main
+@Russell-842 ➜ /workspaces/comp1850-semester1 (main) $ 
