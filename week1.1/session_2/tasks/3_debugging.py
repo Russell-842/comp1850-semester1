@@ -3,8 +3,17 @@
 
 # Find and fix the errors
 
-name = imput("Enter your name: ")
-int(age) = input("Enter your age: ")
- city = input("Enter your city: ")
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+city = str(input("Enter your city: "))
 
-print("Hello {name}, you are {age} years old and live in {city}.")
+print(f"Hello {name}, you are {age} years old and live in {city}.")
+
+try :
+    num1 = int(input("Enter your number : "))
+    num2 = int(input("Enter your number : "))
+    answer = num1 + num2
+    print(f"{num1} + {num2} = {answer}")
+except :
+    print("Please enter numbers only")    
+
