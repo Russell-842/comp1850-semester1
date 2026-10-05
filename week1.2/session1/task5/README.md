@@ -2,8 +2,7 @@
 
 In this task, we use a dictionary to simulate a simple database of river
 names. Each key in this dictionary is the name of a town or city, each
-associated value is the name of the major river that runs through that town
-or city.
+associated value is the name of the major river that runs through that town or city.
 
 This dictionary can therefore be used to look up a river name, given the
 name of its town or city.

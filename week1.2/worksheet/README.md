@@ -1,7 +1,6 @@
 # COMP1850 Worksheet 1.2
 
-For this worksheet, you will need to implement two Python programs and upload
-them to Gradescope for grading.
+For this worksheet, you will need to implement two Python programs and upload them to Gradescope for grading.
 
 ## Task 1
 
