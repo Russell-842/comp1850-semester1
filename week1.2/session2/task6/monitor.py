@@ -36,3 +36,13 @@ else :
    print("The pressure is low and the system is operating normally.")
 
 # Step 3 : Determine Status
+# If the machine is currently operating, then if either temperature is too high or pressure is too high, alert that the machine is running in unsafe conditions and recommend shutting it down.
+# If everything is normal, indicate that the machine is running normally.
+# If the machine is not currently operating, indicate that it is stopped and no immediate action is needed.
+if operationalstatus == 1 :
+      if temperature > 80 or pressure > 100 :
+          print("The machine is running in unsafe conditions. Shutting the machine down is recommended.")
+      else :
+            print("The machine is running normally.")
+else : 
+      print("The machine is currently stopped. No immediate action is needed.")

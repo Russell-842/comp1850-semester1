@@ -10,8 +10,8 @@
 # and think about WHY they are in this order!
 
 cost = int(input("Amount spent: £"))
-is_member = input("Are you a member? (y/n): ").lower()
-is_student = input("Are you a student? (y/n): ").lower()
+is_member = input("Are you a member? (y/n): ").lower() in ["y", "yes"]
+is_student = input("Are you a student? (y/n): ").lower() in ["y", "yes"]
 
 if is_student and is_member :
     final_cost = cost * 0.7
