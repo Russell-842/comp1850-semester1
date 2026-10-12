@@ -15,7 +15,6 @@ except ValueError :
     print("Error : Grade must be an integer between 0 and 100")
 
 # Immediately exit the program if user doesn't enter a number/integer value outside required range
-
-
-
-
+    
+import sys
+sys.exit()
