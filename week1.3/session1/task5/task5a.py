@@ -5,6 +5,29 @@ course = "computer science"
 for ch in course:
 	print(ch)
 
+# Create a list data structure of the characters from the course string
+chars = []
 
-# create a list data structure of the characters from the course string
-# sort the list into alphabetical order
+for ch in course : 
+	chars.append(ch)
+
+print(chars)
+
+# Sort the list into alphabetical order - OPTION 1 :
+chars = []
+
+for ch in course : 
+	chars.append(ch)
+
+print(sorted(chars))
+
+# Sort the list into alphabetical order - OPTION 2 :
+chars = []
+
+for ch in course : 
+	chars.append(ch)
+
+chars.sort()
+print(chars)
+
+# 'chars' = random list name

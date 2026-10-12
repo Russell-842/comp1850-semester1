@@ -7,11 +7,18 @@ rivers = {
   "York": "Ouse"
 }
 
-# loop through the dict extracting key and value
+# Loop through the dict extracting key and value
 
-for c, r in rivers.items():
+for c, r in rivers.items() :
     print(c, r)
 
+# 1. Iterate Keys
+for city in rivers.keys() :
+  print(city)
 
-# create 2 further for loops to iterate: 1. just through the keys, 2. just through the values
-# hint: we looked at built in function for dicts last session
+# 2. Iterate Values
+for river in rivers.values() :
+  print(river)
+
+# Create 2 further for loops to iterate: 1. just through the keys, 2. just through the values
+# Hint: we looked at built in function for dicts last session

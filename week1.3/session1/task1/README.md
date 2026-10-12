@@ -25,5 +25,5 @@
 
 3. Walk through the code step-by-step. What is the value of the `fruit` list on the 1st iteration, the 4th iteration, and right after the loop finishes?
 
-4. Why doesn't this loop run forever(infinite loop)?
+4. Why doesn't this loop run forever (infinite loop)?
 
