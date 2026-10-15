@@ -9,7 +9,6 @@
 4. Add codes to open a file called `user_info.txt` for writing.
 
 5. Write each piece of information to the file, each on a new line.
-    
     Hints:
     - Remember to add `\n` for new lines when writing to files
 

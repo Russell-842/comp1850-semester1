@@ -14,4 +14,12 @@ for i in values:
 print(newval)
 
 # write the list comprehension equivalent to the `for` loop
+# finish this
 
+values = [1, 4, 2, 6, 3, 7]
+
+print(values)
+
+newval_2 = [item for item in values if item % 2]
+
+print(newval_2)
