@@ -13,7 +13,6 @@
 # is within the range, otherwise print "The temperature is out of range."
 
 
-
 def valid_temperature(temperature):
     if temperature >= -100 and temperature <= 100:
         return True

@@ -11,6 +11,9 @@
 # function implementation
 
 def mystery_func(string):
+    """
+    
+    """
     upper = 0
     lower = 0
 
@@ -21,14 +24,12 @@ def mystery_func(string):
             lower += 1
     return (upper, lower)
 
-
 # testing
 
 print(mystery_func("abc"))
 print(mystery_func("The quick Brown Fox!"))
 print(mystery_func("012345"))
 print(mystery_func("ABC"))
-
 
 # Can you predict the output of the following lines of code?
 # Uncomment the lines of code one by one and run the program
