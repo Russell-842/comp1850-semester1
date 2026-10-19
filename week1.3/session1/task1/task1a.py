@@ -4,6 +4,8 @@ i = 0
 
 while i < 21:
 	print(i)
+	if i > 0 and i % 4 == 0:
+		print("{} is a multiple of 4".format(i))
 	i = i + 1
 
 # Modify the loop to print numbers up to and including 20

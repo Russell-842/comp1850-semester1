@@ -7,11 +7,11 @@ favourite_colour = input("Enter your favourite colour : ")
 
 # Open a file called 'user_info.txt' for reading
 with open("user_info.txt", "w") as outfile :
-    outfile.write("Hello")
-
 # Write each piece of information to the file, each on a new line.
-
-
+    outfile.write(name + "\n")
+    outfile.write(str(age) + "\n")
+    outfile.write(favourite_colour + "\n")
+    
 # Hints:
 # - Remember to add \n for new lines when writing to files
 

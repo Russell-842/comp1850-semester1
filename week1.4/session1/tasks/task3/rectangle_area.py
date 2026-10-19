@@ -33,3 +33,8 @@ def even_numbers(limit) :
 print(even_numbers(20))
 
 # 3) Accept a list of integers and returns the mean average of the list.
+def mean_average(numbers):
+    return sum(numbers) / len(numbers)
+
+
+print(mean_average([1, 2, 3, 4, 5]))

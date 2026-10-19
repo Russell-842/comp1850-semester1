@@ -4,15 +4,24 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 # open and read the file
+from pathlib import Path
 
 filename = input("Enter filename : ")
 
-with open("glasses.txt", "r") as infile :
-    content = infile.read()
+try:
+    file_path = Path(filename)
+    if not file_path.is_absolute() and not file_path.exists():
+        file_path = Path(__file__).resolve().parent / file_path
 
-words = content.split(" ")
-print(len(words))
-print(words)
+    with file_path.open("r") as infile:
+        content = infile.read()
+    words = content.split()
+    print(len(words))
+    print(words)
+except FileNotFoundError:
+    print(f"Error: The file '{filename}' was not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
@@ -24,3 +33,4 @@ print(words)
 # story.txt - 290
 # story2.txt - 326
 # glasses.txt - 210
+# ENTER for filename e.g week1.3/session2/task2/1_word_counter/glasses.txt
