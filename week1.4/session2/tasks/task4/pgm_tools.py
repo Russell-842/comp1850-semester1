@@ -1,7 +1,7 @@
 
 # PGM functions that we write
 
-def readPGM( filename ):
+def readPGM( filename):
     ''' 
     Read a named PGM file and store the data in a tuple.
     Input: filename string

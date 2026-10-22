@@ -15,10 +15,15 @@ def countdown(n):
     """
 
     # Complete your code here
-    # base case
-
-    # recursive case
-
+def countdown(n) :
+    # Base case = Stops when countdown reaches 0
+    if n <= 0:
+        print(0)        
+        return None
+    # Recursive case = Prints countdown from n to 0
+    else : 
+        print(n)
+        countdown(n - 1)
 
 # check if correct output is produced
 countdown(30)    # 30 ... 0 (Note: each number is printed in a separate line)
