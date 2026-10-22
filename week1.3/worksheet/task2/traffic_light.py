@@ -13,13 +13,24 @@ state = "red"
 
 print(f"Time {systime:003} State {state}")
 
-state = "red_amber"
+time_in_state = 1
 
-print(f"Time {systime:006} State {state}")
+while systime < maxtime :
+    if time_in_state >= states[state] :
+        if state == "red" :
+            state = "red_amber"
+        elif state == "red_amber" :
+            state = "green"
+        elif state == "green" :
+            state = "amber"
+        else :
+            state = "red"
 
-state = "green"
+        time_in_state = 0
+    systime += 1
+    time_in_state += 1
 
-print(f"Time {systime:007} State {state}")
+    print(f"Time {systime:003} State {state}")
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
