@@ -44,9 +44,7 @@ Edit the file named `person.py`. Implement a constructor that creates and
 initializes fields called `name` and `birth`. The former represents a person's
 name, the latter represents their date of birth.
 
-Your constructor should raise a `TypeError` if the value provided for `name`
-is not a string. It should raise a `ValueError` if the value provided for
-`name` is an empty string.
+Your constructor should raise a `TypeError` if the value provided for `name` is not a string. It should raise a `ValueError` if the value provided for `name` is an empty string.
 
 The constructor should also raise a `TypeError` if the value provided for
 `birth` is not a `date` object.
