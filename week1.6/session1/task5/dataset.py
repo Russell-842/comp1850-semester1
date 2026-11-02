@@ -41,12 +41,21 @@ class QuakeDataset:
         # dictionaries. You will need to extract the required values from
         # each dictionary and convert them into the required types before
         # creating a Quake object and storing it in the list.
+        self.data.clear()
+        for info in self.feed.reader():
+            time = datetime.fromisoformnat(info['time'])
+            lon = float(info['longitude'])
+            lat = float(info['latitude'])
+            depth = float(info['depth'])
+            mag = float(info['magnitude'])
+            self.data.append(Quake(time, lon, lat, depth, mag))
 
     def __len__(self):
         """
         Returns the size of this dataset.
         """
         # Write code here that returns the number of quakes downloaded
+        return len(self.data)
 
     def __str__(self):
         """
@@ -54,6 +63,7 @@ class QuakeDataset:
         """
         # Write code here to create and return a string representation
         # (Include number of quakes and details of the feed that was used)
+        return len
 
     def mean_depth(self):
         """

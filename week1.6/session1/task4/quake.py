@@ -15,3 +15,9 @@ class Quake:
     latitude: float
     depth: float
     magnitude: float
+
+from datetime import datetime
+now = datetime.now()
+from quake import Quake
+q = Quake(now, 139.9, 28.0, 473.0, 7.0)
+print(q)

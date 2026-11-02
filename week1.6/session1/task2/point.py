@@ -41,3 +41,4 @@ class Point:
             return False
 
         return self.x == other.x and self.y == other.y
+
