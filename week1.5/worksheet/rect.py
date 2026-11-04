@@ -3,30 +3,26 @@
 import math 
 
 
-class Rectangle:
+class Rectangle :
     """
     A rectangle, with a width and a height.
     """
+
     def __init__(self, width, height):
         """
         Creates a Rectangle, given values for width and height.
-        """
-        self.width = width
-        self.height = height
-    try :
-         width = int(width("Enter width : "))
-         height = int(height("Enter height : "))
-    except TypeError :    
+        """  
         if not isinstance(width, (int)):
             raise TypeError("Width must be an integer")
+        
         if not isinstance(height, (int)):
             raise TypeError("Height must be an integer")
 
-    if width and height <= 0:
-        raise ValueError("Only positive integers are allowed")
-    
-    # Implement methods is_square(), area() & perimeter() here
-    # (See README.md for details of what they should do)
+        if width <= 0 or height <= 0:
+            raise ValueError("Only positive integers are allowed")
+
+        self.width = width
+        self.height = height
 
     def is_square(self):
         """

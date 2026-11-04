@@ -2,25 +2,44 @@
 
 from datetime import date
 
+
 class Person:
     """
     A Person, with a name and a date of birth.
     """
-    # Write a constructor here to create and initialize name and
-    # birth fields (see README.md for further details)
-    def _init__(self, name, birth):
+
+    def __init__(self, name, birth):
+        """
+        Creates values for a Person, using given name and birth date
+        """
+        
+        if not isinstance(name, (str)):
+            raise TypeError("Name must be a string")
+    
+        if not isinstance(birth, (date)):
+            raise TypeError("Birth date must be a 'date' object")
+
+        if name == "" :
+            raise ValueError("The 'name' value should not be empty")
+
         self.name = name
         self.birth = birth
 
-    try :
-         width = int(name("Enter name : "))
-         height = int(birth("Enter birth date : "))
-    except TypeError :
-        if not isinstance(width, (str)):
-            raise TypeError("Name must be a string")
-        if not isinstance(birth, (date)):
-            raise TypeError("Birth date must be a date")
+    def initials(self):
+        """
+    Returns uppercased initial letters of person's name
+        """
+        return self.name.upper()[0]
 
+    def is_birthday(self):
+        """
+    Returns 'True' if today is person's birthday and 'False' otherwise
+        """
+        today = date.today()
 
-    # Implement methods initials() and is_birthday() here
-    # (see README.md for further details)
+        return (
+        today.day == self.birth.day 
+        and today.month == self.birth.month
+        )
+        
+
