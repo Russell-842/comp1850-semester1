@@ -29,7 +29,7 @@ class Person:
         """
     Returns uppercased initial letters of person's name
         """
-        return self.name.upper()[0]
+        return self.name
 
     def is_birthday(self):
         """
