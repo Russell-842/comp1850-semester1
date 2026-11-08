@@ -21,3 +21,7 @@ Now test them for equality, with
 You should see a result of `False` displayed.
 
 Finally, exit the interpreter by pressing `Ctrl+D`.
+
+# Write (to direct terminal to correct file) :
+# cd week1.6/session1/task1
+# Type 'ls' to check where terminal is currently in

@@ -22,3 +22,9 @@ You should see a result of `True` displayed. This time, the comparison tests
 for equality of state rather than equality of identity.
 
 Finally, exit the interpreter by pressing `Ctrl+D`.
+
+# Write (to direct terminal to correct file) :
+# If moving from task 1 terminal to task 2 terminal
+# cd ../task2
+# Type 'ls' to check where terminal is currently in
+

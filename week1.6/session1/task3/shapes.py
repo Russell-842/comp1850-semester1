@@ -59,10 +59,13 @@ class Circle(Shape):
         """
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number - integer or float")
-        if not isinstance(radius < 0):
-            raise ValueError(f"invalid radius : must be greater than 0")
+        if radius <= 0:
+            raise ValueError("invalid radius: must be greater than 0")
         
         self.radius = radius
+
+    def __str__(self):
+        return f"{self.colour} circle, radius {self.radius}, at {self.position}"
 
     def area(self):
         """
@@ -75,3 +78,4 @@ class Circle(Shape):
         Returns the perimeter of this Circle
         """
         return 2.0 * math.pi * self.radius
+

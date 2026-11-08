@@ -42,3 +42,7 @@ class Point:
 
         return self.x == other.x and self.y == other.y
 
+# Write (to direct terminal to correct file) :
+# If moving from task 1 terminal to task 2 terminal
+# cd ../task2
+# Type 'ls' to check where terminal is currently in

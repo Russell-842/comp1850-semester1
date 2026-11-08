@@ -55,14 +55,14 @@ class Image:
             raise ImageError("width cannot be < 1")
         if height < 1:
             raise ImageError("height cannot be < 1")
-
-        img = Image()
-        img.read_pgm("scene.pgm")
         
         self.width = width
         self.height = height
         self.max_value = maximum
-        self.pixels = [value] * (width * height)
+        self.pixels = []
+
+        for row in range(height):
+            self.pixels.append([value] * width)
 
     def read_pgm(self, filename):
         """
@@ -95,13 +95,16 @@ class Image:
         self.max_value = int(line)
 
     def _parse_pixels(self, imgfile):
-        self.pixels = [int(value) for value in imgfile.read().split()]
+        values = [int(value) for value in imgfile.read().split()]
 
-        if len(self.pixels) != self.width * self.height:
+        if len(values) != self.width * self.height:
             raise ImageError("number of pixels doesn't match image dimensions")
 
-        if any(p < 0 or p > self.max_value for p in self.pixels):
-            raise ImageError(f"pixel value outside allowed range (0 to {self.max_value})")
+        self.pixels = []
+
+        for row in range(self.height):
+            start = row * self.width
+        self.pixels.append(values[start:start + self.width])
 
     def get(self, row, col):
         """
@@ -115,7 +118,7 @@ class Image:
         Sets pixel at the specified row & column coordinates to the given value.
         Pixel values stored as a list of lists, instead of a linear list
         """
-        return self.pixels[row][col][value]
+        self.pixels[row][col] = value
     
     def copy(self):
         """
@@ -138,13 +141,7 @@ class Image:
 
     def _write_pixels(self, imgfile):
         for row in range(self.height):
-            start = row * self.width
-            for value in self.pixels[start:start + self.width]:
-                print(f"{value:4d}", end="", file=imgfile)
-            print(file=imgfile)
-
-from array import array 
-
-# Pixel values stored as an array, using 'B' as the array's typecode
-b = array()
-print(b)
+            for row in self.pixels:
+                for value in row:
+                    print(f"{value:4d}", end="", file=imgfile)
+                print(file=imgfile)
