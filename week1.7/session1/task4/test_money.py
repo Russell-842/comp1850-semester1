@@ -22,20 +22,21 @@ def test_add_invalid_type():
         m1 + 42
     assert str(excinfo.value) == "other object must be a Money"
 
-
+# Test implementation for invalid type for pence (TypeError)
 def test_invalid_type_pence():
-    # complete the test implementation for 
-    # invalid type for pence
+# Raise TypeError when pence cannot be converted to a number
+    with pytest.raises(TypeError) :
+        Money(1, 5.0)
     
 
-def test_invalid_value_pence():
-    # complete the test implementation for 
-    # invalid value for pence
-    
+def test_pence_negative():
+# Raise ValueError when it is negative; convert valid input to Decimal for reliable price handling
+    with pytest.raises(ValueError) :
+        Money(1, -1)
+            
 
 def test_valid_add():
     # complete the test implementation for
     # valid add between money objects
     # Hint: you can compare using the __str()__ (
     # e.g., str(m1 + m2) == "£2.04"
-    
