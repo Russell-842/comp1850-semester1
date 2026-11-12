@@ -22,7 +22,8 @@ def read_marks(filename):
         for line in infile:
             name, mark = line.strip().split(",")
             data[name] = mark
-        return data
+        # Convert mark to an integer before being stored in the dictionary
+        return int(data)
 
 
 def grade(mark):
@@ -46,8 +47,7 @@ def grade(mark):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("Usage: python grades.py <csv-filename>")
+    sys.exit("Usage: python grades.py <csv-filename>")
 
     marks = read_marks(sys.argv[1])
 

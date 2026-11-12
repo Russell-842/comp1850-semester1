@@ -4,7 +4,12 @@
 
 expenses = [10, 20, 30]
 
+# Add this to define starting total is 0
+total = 0 
+
 for amount in expenses:
     total = total + amount  
 
 print(total)
+
+# NameError : name 'total' is not defined

@@ -4,5 +4,8 @@
 
 user_profile = {"username": "alice99", "role": "admin"}
 
-for key, value in user_profile:
+# Add .items() as it is a dictionary
+for key, value in user_profile.items() :
 	print(f"{key} : {value}")
+
+# ValueError : too many values to unpack (expected 2)

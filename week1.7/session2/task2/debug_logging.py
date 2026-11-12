@@ -4,11 +4,12 @@ import logging
 
 def calculate_average(scores):
     # add logging configuration    
-    logging.basicConfig(filename='log.txt', filemode='w', level=logging.DEBUG)
+    logging.basicConfig(filename="log.txt", filemode="w", level=logging.DEBUG)
     
     # you can turn the logging off
     # logging.disable(logging.CRITICAL)
-    
+    logging.disable(logging.CRITICAL)
+
     logger = logging.getLogger()
     logger.info(f"calculate_average(): started")
     
@@ -16,13 +17,17 @@ def calculate_average(scores):
     total_assignments = len(scores)
     
     # add debug logging here
+    logger.debug(f"{total_score} divided by {total_assignments}")
     
-    average = total_score // total_assignments
+    average = total_score / total_assignments
     
     # add a debug logging here
+    logging.debug(f"Calculated average : {average}")
     
-    return round(average,2)
+    return round(average, 2)
 
 print(calculate_average([85, 90, 88]))
 # Expected Output: 87.67
 # Actual Output:   87.0
+
+# Using / instead of // to find float division, with the actual answer
