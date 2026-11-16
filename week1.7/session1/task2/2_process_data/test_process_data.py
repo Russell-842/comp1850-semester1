@@ -10,16 +10,25 @@
 from process_data import process_data
 
 # Implementation for testing an empty list
+# Says to return None if no data
 def test_empty_list():
-    assert process_data() == "EMPTY LIST"
+    assert process_data([]) is None
     
 # Implementation for testing a list with a single integer
 def test_one_int_list():
-    assert process_data() == "SINGLE INTEGER LIST"
+    assert process_data([1]) == 1
 
 # Implementation for testing a list with multiple integers
 def test_multiple_int_list():
-    assert process_data() == "MULTIPLE INTEGER LIST"
+    assert process_data([1, 2, 3]) == 6
+
+    # Implementation for testing a list with negative integers
+def test_negative_int_list():
+    assert process_data([-1, -2, -3]) == -6
+
+    # Implementation for testing a list with mixed integers
+def test_mixed_int_list():
+    assert process_data([-1, 2, -3]) == -2
 
 
     

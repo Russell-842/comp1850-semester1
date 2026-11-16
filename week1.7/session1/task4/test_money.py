@@ -36,7 +36,6 @@ def test_pence_negative():
             
 
 def test_valid_add():
-    # complete the test implementation for
-    # valid add between money objects
-    # Hint: you can compare using the __str()__ (
-    # e.g., str(m1 + m2) == "£2.04"
+    m1 = Money(1, 50)
+    m2 = Money(0, 54)
+    assert str(m1 + m2) == "£2.04"

@@ -38,7 +38,8 @@ def grade(mark):
     """
     if 0 <= mark < 40:
         return "Fail"
-    elif 40 <= mark <= 70:
+    # <= 70 orginally returned both Pass and Distinction so I changed it to <70 for a 'Pass'
+    elif 40 <= mark < 70:
         return "Pass"
     elif 70 <= mark <= 100:
         return "Distinction"
