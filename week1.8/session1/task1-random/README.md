@@ -24,8 +24,7 @@ In this file, write a program that
 
 You can generate random integers or floating-point values, as you prefer.
 
-Run the program after completing each of the steps listed above, to check that
-it is working correctly.
+Run the program after completing each of the steps listed above, to check that it is working correctly.
 
 ## `random_choice.py`
 
