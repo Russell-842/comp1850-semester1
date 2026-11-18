@@ -7,6 +7,10 @@ how_many = int(input("How many random numbers do you want ? "))
 random.seed() 
 
 # Write the random numbers to a file named random.txt, one number per line
-nums = list(range())
+nums = []
+
+for i in range(how_many):
+    nums.append(random.randint(1, 100))
+
 print(nums)
 
