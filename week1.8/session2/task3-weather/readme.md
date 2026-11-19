@@ -1,7 +1,7 @@
 
 # Task 3 - weather data
 
-The web site [Visual Crossing](https://www.visualcrossing.com/weather-api/) provides an API for weather data.
+The web site [Visual Crossing](https://www.visualcrossing.co/m/weather-api) provides an API for weather data.
 
 We can query various weather data for a location, eg. rainfall in Leeds for 14 days.
 
