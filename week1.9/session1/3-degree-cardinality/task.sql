@@ -11,4 +11,14 @@
 .schema customers
 
 -- And to see a count of the total number of tuples
-SELECT COUNT(*) as Cardinality FROM customers; 
+SELECT COUNT(*) as Cardinality FROM customers;
+
+-- Make sure to be in the right DIRECTORY (cd week1.9/session1/3-degree-cardinality)
+# Table with Degree + Cardinality
+customers = 7 + 180
+restaurants = 5 + 30
+menu_items = 5 + 270
+drivers = 4 + 18
+orders = 7 + 1300
+order_items = 3 + 2693
+reviews = 4 + 412
